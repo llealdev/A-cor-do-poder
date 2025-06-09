@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     item.addEventListener('click', function() {
         const bioId = item.getAttribute('data-id');
         // Redireciona para a página de biografias, já na âncora da pessoa
-        window.location.href = '/src/biografias/index.html#' + bioId;
+        window.location.href = '../biografias/index.html#' + bioId;
     });
     });
 });

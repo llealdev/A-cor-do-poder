@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A cor do poder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">A Cor do Poder</div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#" class="active">Início</a></li>
+                    <li><a href="../biografias/index.html">Biografias</a></li>
+                    <li><a href="../quebrandoanarrativa/index.html">Quebrando a narrativa</a></li>
+                  <!--   <li><a href="#">⁠Compartilhe sua voz</a></li> -->
+                   <li><a href="#">Sobre</a></li> 
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <section class="text-section" id="textSection">
+                <div class="date">JUNE 13, 2025</div>
+                <h1 class="title">A cor do poder</h1>
+                <p class="description">
+                    Por que pessoas negras não podem ser bem sucedidas?
+                </p>
+                <a href="../quebrandoanarrativa/index.html" class="read-more-button">Ver mais</a>
+            </section>
+            
+            <section class="biography-section" id="biographySection">
+                <button class="back-button" id="backButton">← Voltar</button>
+                <div class="biography-content">
+                </div>
+            </section>
+            
+            <section class="image-carousel" id="imageCarousel">
+                <div class="image-item" 
+                     style="background-image: url('../imagens/adrielle-1.jpg');"
+                      data-id="adrielle"
+                      data-name="Adrielle Leal"      
+                ></div>
+                <div class="image-item" 
+                     style="background-image: url('../imagens/luz-1.jpg');"
+                     data-id="luzimaia" 
+                     data-name="Luzimaia Nunes"
+   
+                ></div>
+                <div class="image-item" 
+                     style="background-image: url('../imagens/guilherme-1.jpg');"
+                     data-id="guilherme"
+                     data-name="Guilherme Moura"
+
+                ></div>
+                <div class="image-item" 
+                     style="background-image: url('../imagens/efraim-1.jpg');"
+                     data-id="efraim"
+                     data-name="Efraim Santos"
+                ></div>
+                     
+            </section>
+        </main>
+
+        <footer class="news-bar">
+            <div class="news-ticker">
+                <div class="news-item-wrapper">
+                    <div class="news-item">Adrielle Leal: Confeiteira e Empreendedora</div>
+                    <div class="news-item">Luzimaia Nunes: Historiadora e Professora</div>
+                    <div class="news-item">Guilherme Moura: Estudante de Relações Públicas e Supervisor de Operações</div>
+                    <div class="news-item">Efraim Santos: Filmmaker</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

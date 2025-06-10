@@ -41,6 +41,7 @@ body {
     padding: 20px 40px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     background: white;
+    position: relative; /* Adicionado para posicionamento do menu toggle */
 }
 
 .header .logo {
@@ -80,6 +81,55 @@ body {
     background-color: var(--text-color-dark);
 }
 
+/* --- Menu Toggle (Hambúrguer) --- */
+.menu-toggle {
+    display: none; /* Esconde por padrão em telas maiores */
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-color-dark);
+}
+
+/* --- Mobile Navigation Menu --- */
+.mobile-nav-menu {
+    display: none; /* Esconde por padrão */
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    top: 61px; /* Ajuste conforme a altura do seu header */
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.mobile-nav-menu.active {
+    display: block; /* Mostra quando ativo */
+}
+
+.mobile-nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav-menu ul li {
+    margin-bottom: 15px;
+}
+
+.mobile-nav-menu ul li a {
+    text-decoration: none;
+    color: var(--text-color-dark);
+    font-weight: 500;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+}
+
+.mobile-nav-menu ul li a.active {
+    color: var(--text-color-light);
+    font-weight: 700;
+}
 
 
 /* --- Main Content Section --- */
@@ -160,8 +210,12 @@ body {
     transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     z-index: 10;
     overflow-y: auto;
+    opacity: 0;
 }
 
+.biography-section.active {
+    right: 0; /* Mostra a seção de biografia */
+}
 
 .back-button {
     background: none;
@@ -364,8 +418,16 @@ body {
     }
 }
 
-/* Responsividade */
+/* --- Responsividade --- */
 @media (max-width: 992px) {
+    .header .nav-menu {
+        display: none; /* Esconde o menu de navegação padrão em telas menores */
+    }
+
+    .menu-toggle {
+        display: block; /* Mostra o ícone do menu hambúrguer */
+    }
+
     .main-content {
         flex-direction: column;
         padding: 40px 20px;
@@ -415,6 +477,7 @@ body {
         right: auto !important; /* Reseta o posicionamento 'right' */
         filter: grayscale(0%) !important; /* Todas coloridas em responsivo */
         z-index: auto !important; /* Reseta z-index */
+        border-radius: 10px; /* Altera para um arredondamento menos agressivo em mobile */
     }
 
     .image-carousel.expanded .image-item::after {
@@ -430,15 +493,29 @@ body {
     .news-bar .label {
         margin-bottom: 10px;
     }
+
+    /* Ajuste para o carousel expandido em telas menores */
+    .image-carousel.expanded {
+        flex-direction: row; /* Volta a ser row para scroll horizontal quando expandido */
+        justify-content: flex-start;
+        align-items: center;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 20px; /* Adiciona padding para as imagens não colarem nas bordas */
+        box-sizing: border-box;
+    }
+
+    .image-carousel.expanded .image-item {
+        width: 90vw !important; /* Ocupa 90% da largura da viewport */
+        height: 60vh !important; /* Ocupa 60% da altura da viewport */
+        margin: 0 10px; /* Espaçamento entre as imagens */
+        flex-shrink: 0;
+    }
 }
 
 @media (max-width: 768px) {
     .header {
         padding: 15px 20px;
-    }
-
-    .header .nav-menu {
-        display: none; /* Em telas muito pequenas, o menu pode sumir ou virar hambúrguer */
     }
 
     .header .logo {
@@ -457,9 +534,41 @@ body {
     .biography-section {
         width: 100%;
         right: -100%;
+        padding: 20px; /* Reduz padding em telas menores */
     }
 
     .biography-section.active {
         right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-section .title {
+        font-size: 30px;
+    }
+
+    .text-section .description {
+        font-size: 16px;
+    }
+
+    .image-item {
+        width: 150px !important;
+        height: 200px !important;
+    }
+
+    .bio-title {
+        font-size: 32px;
+    }
+
+    .bio-subtitle {
+        font-size: 24px;
+    }
+
+    .news-bar {
+        padding: 10px 15px;
+    }
+
+    .news-item {
+        padding-right: 30px;
     }
 }

@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -22,9 +23,11 @@
                     <li><a href="../index.html">Início</a></li>
                     <li><a href="#" class="active">Biografias</a></li>
                     <li><a href="../quebrandoanarrativa/index.html">Quebrando a narrativa</a></li>
-             
                 </ul>
             </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
         </header>
 
         <main class="main-content">
@@ -44,7 +47,7 @@
                             <span class="bio-date">MAIO 2025</span>
                             <span class="bio-category">EMPREENDEDORISMO</span>
                         </div>
-                        <h2 class="bio-name" data-target="adrielle">Adrielle Leal</h2>
+                        <h2 class="bio-name">Adrielle Leal</h2>
                         <h3 class="bio-profession">Confeiteira e Empreendedora</h3>
                         <div class="bio-text">
                             <p>Aos 23 anos, Adrielle Leal representa a força determinada de muitas mulheres negras que,
@@ -96,7 +99,7 @@
                             <span class="bio-date">MAIO 2025</span>
                             <span class="bio-category">EDUCAÇÃO</span>
                         </div>
-                        <h2 class="bio-name" data-target="luzimaia">Luzimaia Nunes</h2>
+                        <h2 class="bio-name">Luzimaia Nunes</h2>
                         <h3 class="bio-profession">Historiadora e Professora</h3>
                         <div class="bio-text">
                             <p>Luzimaia Nunes nasceu no dia 9 de fevereiro de 1977, no município de Nazaré das
@@ -150,13 +153,11 @@
                                 voz.
                             </p>
 
-
                             <p>Atualmente, vive em Salvador, onde já morou em diversos bairros. Apesar de ocupar
                                 espaços mais centrais e valorizados, relata sentir-se invisível enquanto mulher negra
                                 nesses contextos mais individualistas, em contraste com a coletividade vivida na
                                 infância.
                             </p>
-
 
                             <p>Luzimaia se considera uma inspiração para muitas pessoas. Sua trajetória – da
                                 periferia à construção de uma identidade sólida através da educação – é marcada por
@@ -179,7 +180,7 @@
                             <span class="bio-date">MAIO 2025</span>
                             <span class="bio-category">LIDERANÇA</span>
                         </div>
-                        <h2 class="bio-name" data-target="guilherme">Guilherme Moura</h2>
+                        <h2 class="bio-name">Guilherme Moura</h2>
                         <h3 class="bio-profession">Estudante de RP e Supervisor</h3>
                         <div class="bio-text">
                             <p>Guilherme Moura nasceu em Salvador, capital da Bahia, e possui 23 anos. Desde pequeno,
@@ -249,7 +250,7 @@
                             <span class="bio-date">MAIO 2025</span>
                             <span class="bio-category">CINEMA</span>
                         </div>
-                        <h2 class="bio-name" data-target="efraim">Efraim Santos</h2>
+                        <h2 class="bio-name">Efraim Santos</h2>
                         <h3 class="bio-profession">Filmmaker</h3>
                         <div class="bio-text">
                             <p>
@@ -312,6 +313,15 @@
         </footer>
     </div>
 
+    <div class="mobile-nav-menu" id="mobile-nav-menu">
+        <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="#" class="active">Biografias</a></li>
+            <li><a href="../quebrandoanarrativa/index.html">Quebrando a narrativa</a></li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

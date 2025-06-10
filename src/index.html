@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="home/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
@@ -18,10 +19,11 @@
                     <li><a href="#" class="active">Início</a></li>
                     <li><a href="biografias/index.html">Biografias</a></li>
                     <li><a href="quebrandoanarrativa/index.html">Quebrando a narrativa</a></li>
-                
-              
                 </ul>
             </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
         </header>
 
         <main class="main-content">
@@ -35,35 +37,29 @@
             </section>
             
             <section class="biography-section" id="biographySection">
-                <button class="back-button" id="backButton">← Voltar</button>
+                <button class="back-button" id="backButton"></button>
                 <div class="biography-content">
+
                 </div>
             </section>
             
             <section class="image-carousel" id="imageCarousel">
                 <div class="image-item" 
                      style="background-image: url('imagens/adrielle-1.jpg');"
-                      data-id="adrielle"
-                      data-name="Adrielle Leal"      
+                     data-id="adrielle"
                 ></div>
                 <div class="image-item" 
                      style="background-image: url('imagens/luz-1.jpg');"
                      data-id="luzimaia" 
-                     data-name="Luzimaia Nunes"
-   
                 ></div>
                 <div class="image-item" 
                      style="background-image: url('imagens/guilherme-1.jpg');"
                      data-id="guilherme"
-                     data-name="Guilherme Moura"
-
-                ></div>
+                    ></div>
                 <div class="image-item" 
                      style="background-image: url('imagens/efraim-1.jpg');"
                      data-id="efraim"
-                     data-name="Efraim Santos"
                 ></div>
-                     
             </section>
         </main>
 
@@ -77,6 +73,14 @@
                 </div>
             </div>
         </footer>
+    </div>
+
+    <div class="mobile-nav-menu" id="mobile-nav-menu">
+        <ul>
+            <li><a href="#" class="active">Início</a></li>
+            <li><a href="biografias/index.html">Biografias</a></li>
+            <li><a href="quebrandoanarrativa/index.html">Quebrando a narrativa</a></li>
+        </ul>
     </div>
 
     <script src="home/script.js"></script>

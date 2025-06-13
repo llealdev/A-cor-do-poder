@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'The Seasons', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #FFF9F9;
@@ -87,7 +87,7 @@ body {
     top: 61px;
     left: 0;
     z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px 0;
     text-align: center;
 }
@@ -247,7 +247,7 @@ body {
 }
 
 .bio-name {
-    font-family: 'Playfair Display', serif;
+    font-family: 'The Seasons', serif;
     font-size: 36px;
     line-height: 1.1;
     margin: 0 0 10px 0;
@@ -261,7 +261,7 @@ body {
 }
 
 .bio-profession {
-    font-family: 'Playfair Display', serif;
+    font-family: 'The Seasons', serif;
     font-size: 20px;
     line-height: 1.2;
     margin: 0 0 25px 0;
@@ -347,7 +347,8 @@ body {
     .biography-article {
         flex-direction: column;
         gap: 30px;
-        align-items: center; /* Garante que tudo dentro do article seja centralizado */
+        align-items: center;
+        /* Garante que tudo dentro do article seja centralizado */
         padding-top: 30px;
         padding-bottom: 30px;
         margin-left: 0;
@@ -364,8 +365,10 @@ body {
     }
 
     .bio-image-container {
-        width: 100%; /* Ocupa a largura total para centralização */
-        text-align: center; /* Fallback para centralizar texto/conteúdo se não for flex */
+        width: 100%;
+        /* Ocupa a largura total para centralização */
+        text-align: center;
+        /* Fallback para centralizar texto/conteúdo se não for flex */
         /* Adicionado para centralizar a imagem filha */
         display: flex;
         justify-content: center;
@@ -380,15 +383,18 @@ body {
 
     .bio-content {
         padding-left: 0;
-        text-align: center; /* Centraliza o texto do conteúdo */
+        text-align: center;
+        /* Centraliza o texto do conteúdo */
     }
 
     .bio-meta {
-        justify-content: center; /* Centraliza meta informações */
+        justify-content: center;
+        /* Centraliza meta informações */
     }
 
     .bio-text p {
-        text-align: left; /* Mantém o alinhamento justificado para o texto longo */
+        text-align: left;
+        /* Mantém o alinhamento justificado para o texto longo */
     }
 
     .news-bar {
@@ -397,6 +403,7 @@ body {
         padding: 15px 20px;
     }
 }
+
 
 @media (max-width: 768px) {
     .header {

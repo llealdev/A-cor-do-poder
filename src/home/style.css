@@ -4,16 +4,22 @@
     --text-color-light: #800B0B;
     --link-color: #000;
     --news-red: #e74c3c;
-    --image-expanded-width: 500px; /* Nova largura para cada imagem expandida */
-    --image-expanded-height: 700px; /* Nova altura para cada imagem expandida */
-    --image-main-width: 500px; /* Largura da imagem principal inicial */
-    --image-main-height: 700px; /* Altura da imagem principal inicial */
-    --image-stacked-width: 500px; /* Largura das imagens empilhadas iniciais */
-    --image-stacked-height: 700px; /* Altura das imagens empilhadas iniciais */
+    --image-expanded-width: 500px;
+    /* Nova largura para cada imagem expandida */
+    --image-expanded-height: 700px;
+    /* Nova altura para cada imagem expandida */
+    --image-main-width: 500px;
+    /* Largura da imagem principal inicial */
+    --image-main-height: 700px;
+    /* Altura da imagem principal inicial */
+    --image-stacked-width: 500px;
+    /* Largura das imagens empilhadas iniciais */
+    --image-stacked-height: 700px;
+    /* Altura das imagens empilhadas iniciais */
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'The Seasons', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #FFF9F9;
@@ -41,7 +47,8 @@ body {
     padding: 20px 40px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     background: white;
-    position: relative; /* Adicionado para posicionamento do menu toggle */
+    position: relative;
+    /* Adicionado para posicionamento do menu toggle */
 }
 
 .header .logo {
@@ -83,7 +90,8 @@ body {
 
 /* --- Menu Toggle (Hambúrguer) --- */
 .menu-toggle {
-    display: none; /* Esconde por padrão em telas maiores */
+    display: none;
+    /* Esconde por padrão em telas maiores */
     font-size: 24px;
     cursor: pointer;
     color: var(--text-color-dark);
@@ -91,20 +99,23 @@ body {
 
 /* --- Mobile Navigation Menu --- */
 .mobile-nav-menu {
-    display: none; /* Esconde por padrão */
+    display: none;
+    /* Esconde por padrão */
     background-color: white;
     width: 100%;
     position: absolute;
-    top: 61px; /* Ajuste conforme a altura do seu header */
+    top: 61px;
+    /* Ajuste conforme a altura do seu header */
     left: 0;
     z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px 0;
     text-align: center;
 }
 
 .mobile-nav-menu.active {
-    display: block; /* Mostra quando ativo */
+    display: block;
+    /* Mostra quando ativo */
 }
 
 .mobile-nav-menu ul {
@@ -139,14 +150,19 @@ body {
     padding: 60px 40px;
     flex-grow: 1;
     position: relative;
-    overflow: visible; /* Mantido para conter o overflow ao expandir */
+    overflow: visible;
+    /* Mantido para conter o overflow ao expandir */
 }
 
 .main-content.text-hidden .text-section {
-    opacity: 0; /* Faz a frase sumir */
-    transform: translateX(-50px); /* Move o texto ligeiramente para a esquerda */
-    z-index: 1; /* Move para trás das imagens */
-    pointer-events: none; /* Desabilita cliques/interações no texto quando oculto */
+    opacity: 0;
+    /* Faz a frase sumir */
+    transform: translateX(-50px);
+    /* Move o texto ligeiramente para a esquerda */
+    z-index: 1;
+    /* Move para trás das imagens */
+    pointer-events: none;
+    /* Desabilita cliques/interações no texto quando oculto */
 }
 
 .text-section {
@@ -154,8 +170,10 @@ body {
     max-width: 500px;
     padding-right: 40px;
     transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    z-index: 2; /* Inicialmente acima das imagens */
-    pointer-events: auto; /* Permite interações no texto por padrão */
+    z-index: 2;
+    /* Inicialmente acima das imagens */
+    pointer-events: auto;
+    /* Permite interações no texto por padrão */
 }
 
 .text-section .date {
@@ -166,9 +184,36 @@ body {
     letter-spacing: 1px;
 }
 
+@font-face {
+    font-family: 'The Seasons';
+    src: url('./fonts/the-seasons.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Aileron';
+    src: url('./fonts/aileron.ttf') format('truetype');
+}
+
+.title {
+    margin: 0;
+    padding: 0;
+    font-size: 2.5rem;
+    line-height: 1.2;
+
+}
+
+.title-parte1 {
+    font-family: 'The Seasons', serif;
+    
+}
+
+.title-parte2 {
+    font-family: 'The Seasons', 'serif';
+}
+
 .text-section .title {
-    font-family: 'Playfair Display', serif;
-    font-size: 130px;
+    font-family: 'The Seasons', serif;
+    font-size: 100px;
     line-height: 1.1;
     margin-top: 0;
     margin-bottom: 20px;
@@ -214,7 +259,8 @@ body {
 }
 
 .biography-section.active {
-    right: 0; /* Mostra a seção de biografia */
+    right: 0;
+    /* Mostra a seção de biografia */
 }
 
 .back-button {
@@ -240,7 +286,7 @@ body {
 }
 
 .bio-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'The Seasons', serif;
     font-size: 48px;
     line-height: 1.1;
     margin: 0 0 10px 0;
@@ -248,7 +294,7 @@ body {
 }
 
 .bio-subtitle {
-    font-family: 'Playfair Display', serif;
+    font-family: 'The Seasons', serif;
     font-size: 32px;
     line-height: 1.2;
     margin: 0 0 30px 0;
@@ -266,14 +312,19 @@ body {
 .image-carousel {
     flex: 1;
     display: flex;
-    justify-content: flex-end; /* Alinha o grupo de imagens à direita */
+    justify-content: flex-end;
+    /* Alinha o grupo de imagens à direita */
     align-items: center;
-    height: var(--image-main-height); /* Altura do container do carrossel */
-    min-width: 600px; /* Garante espaço suficiente */
+    height: var(--image-main-height);
+    /* Altura do container do carrossel */
+    min-width: 600px;
+    /* Garante espaço suficiente */
     position: relative;
     transition: margin-right 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    padding-right: 0; /* Espaço para as imagens expandirem para a direita */
-    overflow: visible; /* Mantido para cortar o que exceder os limites */
+    padding-right: 0;
+    /* Espaço para as imagens expandirem para a direita */
+    overflow: visible;
+    /* Mantido para cortar o que exceder os limites */
 }
 
 /* Estado inicial das imagens (primeira à direita e as outras atrás, com bordas à direita) */
@@ -281,71 +332,99 @@ body {
     position: absolute;
     width: var(--image-stacked-width);
     height: var(--image-stacked-height);
-    border-radius: 45%; /* Mantém o arredondamento */
+    border-radius: 45%;
+    /* Mantém o arredondamento */
     background-size: cover;
     background-position: center;
     cursor: pointer;
     top: 50%;
-    transform: translateY(-50%) ;
+    transform: translateY(-50%);
     transform-origin: left center;
-    filter: grayscale(80%); /* Deixa as imagens de trás "pardas" */
+    filter: grayscale(80%);
+    /* Deixa as imagens de trás "pardas" */
 }
 
 .image-item:nth-child(1) {
-    right: 120px; /* Primeira imagem à direita */
-    width: var(--image-main-width); /* Tamanho da principal */
+    right: 120px;
+    /* Primeira imagem à direita */
+    width: var(--image-main-width);
+    /* Tamanho da principal */
     height: var(--image-main-height);
-    z-index: 4; /* Na frente */
-    filter: grayscale(0%); /* Imagem principal é colorida */
+    z-index: 4;
+    /* Na frente */
+    filter: grayscale(0%);
+    /* Imagem principal é colorida */
 }
 
 .image-item:nth-child(2) {
-    right: 80px; /* Move a segunda imagem 100px para a esquerda (atrás) da primeira */
-    z-index: 3; /* Atrás da primeira */
+    right: 80px;
+    /* Move a segunda imagem 100px para a esquerda (atrás) da primeira */
+    z-index: 3;
+    /* Atrás da primeira */
 }
 
 .image-item:nth-child(3) {
-    right: 40px; /* Move a terceira imagem 200px para a esquerda (atrás) da primeira */
-    z-index: 2; /* Atrás da segunda */
+    right: 40px;
+    /* Move a terceira imagem 200px para a esquerda (atrás) da primeira */
+    z-index: 2;
+    /* Atrás da segunda */
 }
 
 .image-item:nth-child(4) {
-    right: 0px; /* Move a quarta imagem 300px para a esquerda (atrás) da primeira */
-    z-index: 1; /* Atrás da terceira */
+    right: 0px;
+    /* Move a quarta imagem 300px para a esquerda (atrás) da primeira */
+    z-index: 1;
+    /* Atrás da terceira */
 }
 
 .image-carousel.expanded {
-    position: fixed; /* Fixa o carrossel na tela */
+    position: fixed;
+    /* Fixa o carrossel na tela */
     top: 0;
     left: 0;
     right: auto;
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: flex-start; /* Alinha as imagens à esquerda para permitir scroll */
+    justify-content: flex-start;
+    /* Alinha as imagens à esquerda para permitir scroll */
     align-items: center;
     padding: 0;
-    z-index: 10; /* Garante que fique acima de tudo */
-    background-color: rgba(255, 255, 255, 0.95); /* Fundo semi-transparente para o overlay */
-    overflow-x: auto; /* Adiciona scroll horizontal quando o conteúdo exceder */
-    overflow-y: hidden; /* Evita scroll vertical */
-    white-space: nowrap; /* Impede que os itens quebrem a linha */
+    z-index: 10;
+    /* Garante que fique acima de tudo */
+    background-color: rgba(255, 255, 255, 0.95);
+    /* Fundo semi-transparente para o overlay */
+    overflow-x: auto;
+    /* Adiciona scroll horizontal quando o conteúdo exceder */
+    overflow-y: hidden;
+    /* Evita scroll vertical */
+    white-space: nowrap;
+    /* Impede que os itens quebrem a linha */
 }
 
 /* Hover no carrossel - todas as imagens se expandem para a esquerda */
 .image-carousel.expanded .image-item {
-    position: relative; /* Volta para posicionamento relativo para o flexbox organizar */
+    position: relative;
+    /* Volta para posicionamento relativo para o flexbox organizar */
     width: var(--image-expanded-width);
     height: var(--image-expanded-height);
-    z-index: 5 !important; /* Todas vêm para a frente */
-    filter: grayscale(0%); /* Remove o filtro de cinza em todas */
-    margin: 0 10px; /* Adiciona um pequeno espaçamento entre as imagens */
-    flex-shrink: 0; /* Impede que os itens encolham */
+    z-index: 5 !important;
+    /* Todas vêm para a frente */
+    filter: grayscale(0%);
+    /* Remove o filtro de cinza em todas */
+    margin: 0 10px;
+    /* Adiciona um pequeno espaçamento entre as imagens */
+    flex-shrink: 0;
+    /* Impede que os itens encolham */
     transition: margin-right 2s;
-    top: auto; /* Reseta o top do posicionamento absoluto */
-    transform: translateX(0); /* Reseta as transformações (como translateY) */
-    left: auto; /* Reseta o left do posicionamento absoluto */
-    right: auto; /* Reseta o right do posicionamento absoluto */
+    top: auto;
+    /* Reseta o top do posicionamento absoluto */
+    transform: translateX(0);
+    /* Reseta as transformações (como translateY) */
+    left: auto;
+    /* Reseta o left do posicionamento absoluto */
+    right: auto;
+    /* Reseta o right do posicionamento absoluto */
 }
 
 
@@ -421,11 +500,13 @@ body {
 /* --- Responsividade --- */
 @media (max-width: 992px) {
     .header .nav-menu {
-        display: none; /* Esconde o menu de navegação padrão em telas menores */
+        display: none;
+        /* Esconde o menu de navegação padrão em telas menores */
     }
 
     .menu-toggle {
-        display: block; /* Mostra o ícone do menu hambúrguer */
+        display: block;
+        /* Mostra o ícone do menu hambúrguer */
     }
 
     .main-content {
@@ -436,7 +517,8 @@ body {
     }
 
     .main-content.text-hidden .text-section {
-        opacity: 1; /* Garante que o texto esteja visível em telas menores */
+        opacity: 1;
+        /* Garante que o texto esteja visível em telas menores */
         transform: translateX(0);
         z-index: auto;
         pointer-events: auto;
@@ -445,7 +527,8 @@ body {
     .text-section {
         padding-right: 0;
         margin-bottom: 40px;
-        max-width: 100%; /* Permite que o texto ocupe toda a largura disponível */
+        max-width: 100%;
+        /* Permite que o texto ocupe toda a largura disponível */
         text-align: center;
     }
 
@@ -460,28 +543,41 @@ body {
         padding-left: 0;
         margin-left: 0;
         margin-right: 0;
-        flex-direction: column; /* Empilha as imagens */
+        flex-direction: column;
+        /* Empilha as imagens */
         align-items: center;
-        position: relative; /* Volta para relative ou mantem para controle */
-        overflow: hidden; /* Oculta partes se não houver espaço */
+        position: relative;
+        /* Volta para relative ou mantem para controle */
+        overflow: hidden;
+        /* Oculta partes se não houver espaço */
     }
 
     .image-item {
-        position: relative !important; /* Volta para posicionamento relativo para empilhar */
-        transform: none !important; /* Reseta as transformações */
-        opacity: 1 !important; /* Garante que todas estejam visíveis */
+        position: relative !important;
+        /* Volta para posicionamento relativo para empilhar */
+        transform: none !important;
+        /* Reseta as transformações */
+        opacity: 1 !important;
+        /* Garante que todas estejam visíveis */
         width: 250px !important;
         height: 350px !important;
-        margin-bottom: 20px; /* Espaçamento entre as imagens empilhadas */
-        left: auto !important; /* Reseta o posicionamento 'left' */
-        right: auto !important; /* Reseta o posicionamento 'right' */
-        filter: grayscale(0%) !important; /* Todas coloridas em responsivo */
-        z-index: auto !important; /* Reseta z-index */
-        border-radius: 10px; /* Altera para um arredondamento menos agressivo em mobile */
+        margin-bottom: 20px;
+        /* Espaçamento entre as imagens empilhadas */
+        left: auto !important;
+        /* Reseta o posicionamento 'left' */
+        right: auto !important;
+        /* Reseta o posicionamento 'right' */
+        filter: grayscale(0%) !important;
+        /* Todas coloridas em responsivo */
+        z-index: auto !important;
+        /* Reseta z-index */
+        border-radius: 10px;
+        /* Altera para um arredondamento menos agressivo em mobile */
     }
 
     .image-carousel.expanded .image-item::after {
-        opacity: 1; /* Garante que o nome apareça no hover mesmo em responsivo */
+        opacity: 1;
+        /* Garante que o nome apareça no hover mesmo em responsivo */
     }
 
     .news-bar {
@@ -496,22 +592,29 @@ body {
 
     /* Ajuste para o carousel expandido em telas menores */
     .image-carousel.expanded {
-        flex-direction: row; /* Volta a ser row para scroll horizontal quando expandido */
+        flex-direction: row;
+        /* Volta a ser row para scroll horizontal quando expandido */
         justify-content: flex-start;
         align-items: center;
         overflow-x: auto;
         overflow-y: hidden;
-        padding: 20px; /* Adiciona padding para as imagens não colarem nas bordas */
+        padding: 20px;
+        /* Adiciona padding para as imagens não colarem nas bordas */
         box-sizing: border-box;
     }
 
     .image-carousel.expanded .image-item {
-        width: 90vw !important; /* Ocupa 90% da largura da viewport */
-        height: 60vh !important; /* Ocupa 60% da altura da viewport */
-        margin: 0 10px; /* Espaçamento entre as imagens */
+        width: 90vw !important;
+        /* Ocupa 90% da largura da viewport */
+        height: 60vh !important;
+        /* Ocupa 60% da altura da viewport */
+        margin: 0 10px;
+        /* Espaçamento entre as imagens */
         flex-shrink: 0;
     }
 }
+
+
 
 @media (max-width: 768px) {
     .header {
@@ -534,7 +637,8 @@ body {
     .biography-section {
         width: 100%;
         right: -100%;
-        padding: 20px; /* Reduz padding em telas menores */
+        padding: 20px;
+        /* Reduz padding em telas menores */
     }
 
     .biography-section.active {

@@ -204,7 +204,7 @@ body {
 
 .title-parte1 {
     font-family: 'The Seasons', serif;
-    
+
 }
 
 .title-parte2 {
@@ -487,6 +487,52 @@ body {
     color: var(--text-color-dark);
 }
 
+.social-icons-main {
+    display: flex;
+    gap: 25px;
+    /* Espaço entre os ícones */
+    margin-top: 30px;
+    /* Espaço acima dos ícones em relação ao botão */
+    justify-content: flex-start;
+    /* Alinha à esquerda na seção de texto */
+}
+
+.social-icons-main a {
+    color: var(--text-color-dark);
+    /* Cor dos ícones */
+    font-size: 30px;
+    /* Tamanho dos ícones */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons-main a:hover {
+    color: var(--news-red);
+    /* Cor ao passar o mouse */
+    transform: translateY(-3px);
+    /* Pequeno efeito de elevação */
+}
+
+
+/* Estilos para os ícones no menu mobile (mantidos se você os deixou lá) */
+.social-icons-mobile {
+    display: none;
+    /* Esconde por padrão */
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.social-icons-mobile a {
+    color: var(--text-color-dark);
+    font-size: 28px;
+    transition: color 0.3s ease;
+}
+
+.social-icons-mobile a:hover {
+    color: var(--news-red);
+}
+
+
 @keyframes ticker {
     0% {
         transform: translateX(0);
@@ -514,6 +560,23 @@ body {
         padding: 40px 20px;
         height: auto;
         overflow: unset;
+    }
+
+    .social-icons-main {
+        justify-content: center;
+        /* Centraliza os ícones na seção de texto em telas menores */
+        margin-top: 40px;
+        /* Ajusta o espaçamento */
+    }
+
+    .social-icons-main a {
+        font-size: 28px;
+        /* Reduz um pouco o tamanho em mobile se necessário */
+    }
+
+    .mobile-nav-menu.active .social-icons-mobile {
+        display: flex;
+        /* Mostra os ícones no menu mobile quando ativo */
     }
 
     .main-content.text-hidden .text-section {
